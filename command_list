@@ -1,0 +1,62 @@
+Script Criação VM UBUNTU
+
+--Enviroment
+http_proxy="http://spodcpxy0001.indusval.com.br:8080"
+https_proxy="http://spodcpxy0001.indusval.com.br:8080"
+no_proxy=127.0.0.1, localhost, *.cnn.com, 192.168.1.10, domain.com:8080
+
+--Compartilhamento de pasta
+Edit the file /etc/group. Look for the line vboxsf:x:999 and add at the end :yourusername
+
+--Clean and Update apt-get
+sudo apt-get clean
+sudo rm -rf /var/lib/apt/lists/*
+sudo apt-get update
+
+--GIT
+sudo apt-get install git
+git config --global user.name "Otávio Martins Salomão"
+git config --global user.email osalomao@guideinvestimentos.com.br
+
+--Guake
+sudo apt-get install guake
+sudo ln -s /usr/share/applications/guake.desktop /etc/xdg/autostart/
+
+--XFCE
+sudo apt-get install xfce4
+
+--TMUX
+sudo apt-get install tmux
+
+--NODE
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo ln -s /usr/local/lib/node /usr/lib/node
+sudo npm install -g nodemon
+
+--CHROME
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get update 
+
+--oracledb nodejs
+https://github.com/oracle/node-oracledb/blob/master/INSTALL.md#instzip
+
+--DOCKER
+	--install docker
+		https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-16-04-pt
+	--install docker-compose
+		https://docs.docker.com/compose/install/
+	--proxy
+		https://docs.docker.com/engine/admin/systemd/#httphttps-proxy
+		https://blog.codeship.com/using-docker-behind-a-proxy/
+		/etc/resolv.conf
+		
+--ATOM
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+
+--ZSH (shell personalizado)
+https://github.com/robbyrussell/oh-my-zsh
+ 
