@@ -49,6 +49,12 @@ https://github.com/oracle/node-oracledb/blob/master/INSTALL.md#instzip
 		https://docs.docker.com/engine/admin/systemd/#httphttps-proxy
 		https://blog.codeship.com/using-docker-behind-a-proxy/
 		/etc/resolv.conf
+		--DockerFile
+			--SET
+			ENV http_proxy="http://proxy.dominio.com.br:8080/"
+			--UNSET
+			ENV http_proxy=""
+			RUN export http_proxy
 		
 --ATOM
 sudo add-apt-repository ppa:webupd8team/atom
