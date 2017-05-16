@@ -64,4 +64,6 @@ sudo apt-get install atom
 
 --ZSH (shell personalizado)
 https://github.com/robbyrussell/oh-my-zsh
+	-- Adicionar tema em  ~/.oh-my-zsh/themes 
+	-- Selecionar tema em ~/.zshrc
  
